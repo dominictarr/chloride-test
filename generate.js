@@ -143,9 +143,12 @@ var input = [
 
   ['hash_sha256', msgs[0]],
   ['hash_sha256', msgs[1]],
-  ['hash_sha256', msgs[2]]
- 
+  ['hash_sha256', msgs[2]],
+
 //  ['scalarmult', bob_curve.publicKey, alice_curve.secretKey]
+
+  ['generichash', 32, msgs[0], null],
+  ['generichash', 32, msgs[0], key]
 ]
 
 var output = input.map(function (e) {
